@@ -18,7 +18,7 @@ class BirthdayList
         # assume date looks like dd/mm/yyyy
         day, month, year = @list[0][:date].split("/")
 
-        p "#{@list[0][:name]}'s birthday is on the #{day} of #{@months[month.to_i]}, #{year}"
+        p "#{@list[0][:name]}'s birthday is on the #{day} of #{@months[month.to_i]}, #{year}."
 
     end 
 end 

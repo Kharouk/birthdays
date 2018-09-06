@@ -1,6 +1,6 @@
 require 'birthday_list'
 
-describe BirthdayList do
+RSpec.describe BirthdayList do
     birthdays = BirthdayList.new
     birthdays.add("Billy", "12/5/1770") 
     it "Is able to add name and date" do
