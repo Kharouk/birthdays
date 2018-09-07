@@ -16,13 +16,17 @@ class BirthdayList
 
     def display
         # assume date looks like dd/mm/yyyy
+        increment = 0
         day, month, year = @list[0][:date].split("/")
-
-        p "#{@list[0][:name]}'s birthday is on the #{day} of #{@months[month.to_i]}, #{year}."
-
+        @list.each do |person|
+            puts "#{@list[increment][:name]}'s birthday is on the #{day} of #{@months[month.to_i]}, #{year}."
+            increment += 1
+        end
     end 
 end 
 
 birthday = BirthdayList.new 
 birthday.add("Jon", "12/03/2322")
-birthday.display
+birthday.add("Steve", "22/12/1922")
+birthday.add("Brian", "15/01/1995")
+
