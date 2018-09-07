@@ -16,6 +16,7 @@ RSpec.describe BirthdayList do
 
     xit "Correctly displays the name and date using the nice format" do
         expect(birthdays_2.display).to eq "Jonny's birthday is on the 3 of November, 2100."
+        skip
     end
 
 
