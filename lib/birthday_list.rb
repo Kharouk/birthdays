@@ -10,8 +10,13 @@ class BirthdayList
         @date = ""
     end
 
-    def add(name, date)
-        @list << { name: name, date: date }
+    def add(bday_person)
+        if bday_person.instance_of? Person
+            @list << bday_person
+            puts "#{bday_person.name}'s birthday is on the #{bday_person.date}."
+        else
+            puts "GIVE ME PEOPLE ONLY"
+        end
     end
 
     def display
@@ -23,10 +28,12 @@ class BirthdayList
             increment += 1
         end
     end 
-end 
+end
 
-birthday = BirthdayList.new 
-birthday.add("Jon", "12/03/2322")
-birthday.add("Steve", "22/12/1922")
-birthday.add("Brian", "15/01/1995")
-
+class Person
+    attr_reader :name, :date
+    def initialize(name, date)
+        @name = name
+        @date = date
+    end
+end
